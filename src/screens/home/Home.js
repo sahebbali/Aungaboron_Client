@@ -3,6 +3,7 @@ import Slider from "../../components/home/Slider";
 import HomeProduct from "../../components/home/HomeProduct";
 import Categories from "../../components/home/Categories";
 import { useRandomCategoriesQuery } from "../../store/services/categoryService";
+import Footer from "../../components/Footer";
 
 
 
@@ -24,6 +25,10 @@ const {data, isFetching} = useRandomCategoriesQuery()
                      <HomeProduct category={category} key={category._id} />
                 ))}
             </div>
+            <div className=" buttom">
+                <Footer/>
+            </div>
+
         </>
 
     );

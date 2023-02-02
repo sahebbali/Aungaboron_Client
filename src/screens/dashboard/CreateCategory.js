@@ -39,7 +39,7 @@ return (
                 )
             }
             <div className="mb-3">
-                <input type="text" className="from-control"  placeholder="Category Name..." value={state} onChange={(e)=>setState(e.target.value)}/>
+                <input type="text" className="form-control"  placeholder="Category Name..." value={state} onChange={(e)=>setState(e.target.value)}/>
             </div>
             <div className="mb-3">
                 <input type="submit" value={data.isLoading ? 'loading..' : 'Create Category'} className="btn-indigo" />

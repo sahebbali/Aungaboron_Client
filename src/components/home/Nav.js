@@ -9,7 +9,7 @@ const Nav = () => {
   const { userToken, user } = useSelector((state) => state.authReducer);
   const { searchBar } = useSelector((state) => state.globalReducer);
   const { items, total } = useSelector((state) => state.cartReducer);
-  console.log(items);
+
   const dispatch = useDispatch();
   return (
     <>

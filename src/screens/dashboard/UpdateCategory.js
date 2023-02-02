@@ -41,7 +41,7 @@ const UpdateCategory = () => {
                    <p className="alart-danger" key={key}>{error.msg}</p>
                ))}
                <div className="mb-3">
-                   <input type="text" name="" className="from-control"  placeholder="Category Name..." value={state} onChange={(e) => setState(e.target.value)} />
+                   <input type="text" name="" className="form-control"  placeholder="Category Name..." value={state} onChange={(e) => setState(e.target.value)} />
                </div>
                <div className="mb-3">
                    <input type="submit" value="Update" className="btn btn-indigo" />

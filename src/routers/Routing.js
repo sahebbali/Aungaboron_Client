@@ -19,6 +19,8 @@ import CatProducts from "../screens/home/CatProducts.js";
 import Product from "../screens/home/Product.js";
 import Cart from "../screens/home/Cart.js";
 import Orders from "../screens/dashboard/Orders.js";
+import UserOrders from "../screens/users/UserOrders.js";
+import UserOrderDetails from "../screens/users/UserOrderDetails.js";
 import OrderDetails from "../screens/dashboard/OrderDetails.js";
 const Routing =()=>(
     <BrowserRouter>
@@ -35,6 +37,9 @@ const Routing =()=>(
            </Route>
             <Route element={<UserRoute/>}>
             <Route path='user' element={<Dashboard />} />
+            <Route path="orders" element={<UserOrders />} />
+            <Route path="orders/:page" element={<UserOrders />} />
+            <Route path="user-order-details/:id" element={<UserOrderDetails />} />
             </Route>
             <Route path="auth">
                 <Route path="admin-login" element={<Public> <AdminLogin /> </Public>} />

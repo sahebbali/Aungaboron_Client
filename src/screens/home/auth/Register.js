@@ -7,7 +7,7 @@ import { setUserToken } from "../../../store/reducers/authReducer";
 import { setSuccess } from "../../../store/reducers/golobalReducer";
 import { useState,useEffect } from "react";
 import { useDispatch } from "react-redux";
-import {useForm} from "../../../hooks/From";
+import {useForm} from "../../../hooks/Form";
 import {showError} from "../../../utils/ShowError";
 
 const Register = () => {

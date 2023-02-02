@@ -12,10 +12,12 @@ import { useDispatch } from "react-redux";
 import { addCart } from "../../store/reducers/cartReducer";
 
 const DetailsCard = ({ product }) => {
+  console.log(product.price);
+  console.log(product.discount);
   const [sizeState, setSizeState]= useState(product?.sizes?.length > 0 && product.sizes[0].name)
   const [colorState, setColorState]= useState(product?.colors?.length > 0 && product.colors[0].color)
   const [quantity, setQuantity] = useState(1);
-  console.log(sizeState);
+  
   const inc = () => {
     setQuantity(quantity + 1);
   };
@@ -25,6 +27,7 @@ const DetailsCard = ({ product }) => {
     }
   };
   const discountPrice = discount(product.price, product.discount);
+  console.log(discountPrice);
   let desc = h2p(product.description);
   desc = htmlParser(desc);
   const dispatch = useDispatch();
@@ -72,6 +75,10 @@ const DetailsCard = ({ product }) => {
           <span className="text-2xl font-bold text-gray-900">
             {" "}
             {currency.format(discountPrice, { code: "USD" })}
+          </span>
+          <span className="text-2xl font-bold p-2 bg-amber-300 text-red-600">
+           Discount : {" "}
+            {product.discount} %
           </span>
           <span className="text-xl line-through text-gray-500">
             {currency.format(product.price, { code: "USD" })}

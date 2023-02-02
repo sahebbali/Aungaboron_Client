@@ -1,4 +1,8 @@
 export const discount = (price, discount) => {
+  console.log(price);
+  console.log(discount);
     const percentage = discount / 100;
-    return price - price * percentage;
+   const dis = price - price * percentage;
+    console.log(dis);
+    return dis;
   };
