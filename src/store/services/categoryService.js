@@ -4,7 +4,7 @@ const categoryService =createApi({
     reducerPath : 'category',
     tagTypes: 'categories',
     baseQuery : fetchBaseQuery({
-        baseUrl: 'http://localhost:9000/api/',
+        baseUrl: 'https://rich-teal-hare-wear.cyclic.app/',
         prepareHeaders: (headers,{getState}) => {
             const reducers = getState();
             const token =  reducers.authReducer?.adminToken;
