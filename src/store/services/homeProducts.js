@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 const homeProducts = createApi({
   reducerPath: "homeProducts",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://rich-teal-hare-wear.cyclic.app/",
+    baseUrl: 'https://pleasant-wasp-apron.cyclic.app/'
   }),
   endpoints: (builder) => {
     return {

@@ -2,6 +2,7 @@ import Routing from "./routers/Routing";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+
 function App() {
   return (
    <Routing/>
