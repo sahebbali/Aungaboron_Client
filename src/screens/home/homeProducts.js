@@ -26,7 +26,7 @@ const SearchProducts = () => {
             <p className="text-base font-medium text-gray-700">
               {data.count} products found for #{keyword} keyword
             </p>
-            <div className="flex flex-wrap -mx-5">
+            <div className="flex flex-wrap m-4 -mx-5">
               {data.products.map((product) => {
                 return <ProductCard product={product} key={product._id} />;
               })}
